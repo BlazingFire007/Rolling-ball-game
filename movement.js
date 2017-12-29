@@ -22,19 +22,19 @@ pc.script.create('movement', function (app) {
             var forceZ = 0;
             
             // calculate force based on pressed keys
-            if (app.keyboard.isPressed(pc.KEY_LEFT)) {
+            if (this.app.keyboard.isPressed(pc.KEY_LEFT) || this.app.keyboard.isPressed(pc.KEY_A)) {
                 forceX = -this.speed;
-            } 
-            
-            if (app.keyboard.isPressed(pc.KEY_RIGHT)) {
+            }
+
+            if (this.app.keyboard.isPressed(pc.KEY_RIGHT) || this.app.keyboard.isPressed(pc.KEY_D)) {
                 forceX += this.speed;
             }
-            
-            if (app.keyboard.isPressed(pc.KEY_UP)) {
+
+            if (this.app.keyboard.isPressed(pc.KEY_UP) || this.app.keyboard.isPressed(pc.KEY_W)) {
                 forceZ = -this.speed;
-            } 
-            
-            if (app.keyboard.isPressed(pc.KEY_DOWN)) {
+            }
+
+            if (this.app.keyboard.isPressed(pc.KEY_DOWN) || this.app.keyboard.isPressed(pc.KEY_S)) {
                 forceZ += this.speed;
             }
                         
